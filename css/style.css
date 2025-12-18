@@ -1,0 +1,220 @@
+/* Minimal styling for GitHub Pages hosting (safe to expand in Touchstone 2.2) */
+:root {
+  --navy: #001F3F;
+  --bootcamp-blue: #20458E;
+  --pilates-purple: #634E99;
+  --box-jump-blue: #155EBC;
+  --gray: #D3D3D3;
+  --text: #001F3F;
+  --bg: #ffffff;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Calibri, Arial, sans-serif; /* Typography Option 2 base */
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.5;
+}
+
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 0;
+  background: #fff;
+  color: #000;
+  padding: .5rem .75rem;
+  border: 2px solid #000;
+}
+.skip-link:focus { left: .5rem; top: .5rem; z-index: 9999; }
+
+header {
+  border-bottom: 6px solid var(--box-jump-blue);
+  background: linear-gradient(90deg, var(--navy), var(--bootcamp-blue));
+  color: white;
+}
+.header-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.brand {
+  display: flex;
+  gap: .75rem;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+}
+.brand h1 {
+  margin: 0;
+  font-size: 30px; /* Title Large - Option 2 */
+  font-family: Arial, sans-serif;
+  font-weight: 700;
+}
+.brand p {
+  margin: 0;
+  font-size: 15px; /* Subtitle - Option 2 */
+  font-family: Comfortaa, Arial, sans-serif;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: .5rem;
+  flex-wrap: wrap;
+}
+nav a {
+  display: inline-block;
+  padding: .5rem .75rem;
+  border-radius: .5rem;
+  text-decoration: none;
+  color: white;
+  font-weight: 700; /* Title-ish */
+  font-family: Arial, sans-serif;
+}
+nav a[aria-current="page"] {
+  background: rgba(255,255,255,.18);
+  outline: 2px solid rgba(255,255,255,.45);
+}
+nav a:hover, nav a:focus {
+  background: rgba(255,255,255,.12);
+}
+
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.25rem 1rem 2rem;
+}
+h2 {
+  font-size: 25px; /* Title - Option 2 */
+  font-family: Arial, sans-serif;
+  font-weight: 700;
+  margin-top: 0;
+}
+h3 {
+  font-size: 20px; /* Body Large - Option 2 */
+  font-family: Calibri, Arial, sans-serif;
+  margin: .25rem 0 .25rem;
+}
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+.card {
+  border: 1px solid #e5e5e5;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #fff;
+}
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.card .pad { padding: .75rem .9rem 1rem; }
+.card p { margin: 0 0 .6rem; }
+
+.btn {
+  display: inline-block;
+  padding: .55rem .8rem;
+  border-radius: .6rem;
+  border: 2px solid var(--bootcamp-blue);
+  background: white;
+  color: var(--navy);
+  font-weight: 700;
+  font-family: Arial, sans-serif;
+  text-decoration: none;
+}
+.btn:hover, .btn:focus {
+  background: var(--gray);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th, td {
+  border: 1px solid #ddd;
+  padding: .6rem;
+}
+th {
+  background: #f5f7fb;
+  text-align: left;
+  font-family: Arial, sans-serif;
+}
+
+form {
+  display: grid;
+  gap: .75rem;
+  max-width: 720px;
+}
+label {
+  font-family: Arial, sans-serif;
+  font-weight: 700;
+}
+input, textarea, select {
+  width: 100%;
+  padding: .55rem .65rem;
+  border-radius: .5rem;
+  border: 1px solid #bbb;
+  font-family: Calibri, Arial, sans-serif;
+  font-size: 16px;
+}
+fieldset {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: .9rem;
+}
+legend {
+  font-family: Arial, sans-serif;
+  font-weight: 700;
+}
+
+footer {
+  border-top: 6px solid var(--box-jump-blue);
+  background: #0b1731;
+  color: white;
+}
+.footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.25rem 1rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 1rem;
+}
+footer h2 {
+  font-size: 16px; /* Body Strong - Option 2 */
+  font-family: Calibri, Arial, sans-serif;
+  font-weight: 700;
+  margin: 0 0 .5rem;
+  color: white;
+}
+footer a {
+  color: white;
+}
+.small {
+  font-size: 11px; /* Captions - Option 2 */
+  font-family: Arial, sans-serif;
+  font-weight: 700;
+  opacity: .85;
+  margin-top: 1rem;
+}
+
+@media (max-width: 900px) {
+  .card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .footer-inner { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+  .card-grid { grid-template-columns: 1fr; }
+}
