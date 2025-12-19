@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>ABC Fitness Studio | Gallery</title>
   <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to main content</a>
@@ -32,9 +33,13 @@
 <h2>Gallery</h2>
 <p>
   Below are featured classes and items. Each listing includes an image, description, and an <strong>Add to Cart</strong> button.
-  Shopping cart functionality will be implemented in Touchstone Tasks 3.1 and 3.2.
+  For Task 3.1, shopping buttons display JavaScript alert messages. (Shopping cart storage will be added in Task 3.2.)
 </p>
-<p><button class="btn" type="button" aria-label="View shopping cart">View Cart</button></p>
+<div class="cart-actions" aria-label="Shopping cart actions">
+  <button class="btn" type="button" id="viewCartBtn" aria-label="View shopping cart">View Cart</button>
+  <button class="btn" type="button" id="clearCartBtn">Clear Cart</button>
+  <button class="btn" type="button" id="processOrderBtn">Process Order</button>
+</div>
 
 <table aria-label='Gallery of items for sale'><tbody>
 <tr>
@@ -164,7 +169,7 @@
           <button class="btn" type="submit">Subscribe</button>
         </div>
       </form>
-      <p class="small">Note: Subscription processing will be implemented in Touchstone Task 3.1.</p>
+      <p class="small">Note: For Task 3.1, the Subscribe button displays a JavaScript alert. (Web storage will be added in Task 3.2.)</p>
     </section>
 
     <section aria-labelledby="social-heading">
